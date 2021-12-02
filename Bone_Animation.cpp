@@ -117,5 +117,12 @@ glm::mat4 Bone_Animation::bone3_matrix(glm::mat4 bone3_mat)
 
 void Bone_Animation::reset()
 {
+	rotation_degree_vector =
+	{
+		{0.0f,0.0f,0.0f},
+		{0.0f,0.0f,0.0f},
+		{0.0f,0.0f,0.0f},
+		{0.0f,0.0f,0.0f}
+	};
 }
 

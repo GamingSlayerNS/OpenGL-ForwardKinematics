@@ -267,7 +267,7 @@ void Renderer::camera_move()
 	if (glfwGetKey(m_window, GLFW_KEY_P) == GLFW_PRESS)
 		m_camera->reset();
 
-	int rot_direction = 45.0;
+	int rot_direction = 22.5;
 	//NumPad keys
 	if (glfwGetKey(m_window, GLFW_KEY_KP_1) == GLFW_PRESS) {
 		m_bone_animation->rotation_degree_vector[1][0] = m_bone_animation->rotation_degree_vector[1][0] + rot_direction;
@@ -306,13 +306,7 @@ void Renderer::camera_move()
 		glfwWaitEvents();
 	}
 	if (glfwGetKey(m_window, GLFW_KEY_KP_0) == GLFW_PRESS) {
-		m_bone_animation->rotation_degree_vector = 
-		{
-			{0.0f,0.0f,0.0f},
-			{0.0f,0.0f,0.0f},
-			{0.0f,0.0f,0.0f},
-			{0.0f,0.0f,0.0f}
-		};
+		m_bone_animation->reset();
 		glfwWaitEvents();
 	}
 }
